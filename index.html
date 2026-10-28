@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Visualizador de listas Python</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Pyodide: permite ejecutar Python en el navegador -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.js"></script>
+
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Python List Visualizer</h1>
+        <p>Simulador de listas python.</p>
+        <p id="estado-python">Cargando Python...</p>
+    </header>
+
+    <main>
+
+        <section class="panel">
+            <h2>1. Tu lista</h2>
+
+            <label for="lista-inicial">
+                Escribe tu lista inicial de Python:
+            </label>
+
+            <textarea id="lista-inicial" rows="2">[10, 20, 30, 40, 50]</textarea>
+
+            <button id="crear-lista">Crear lista</button>
+
+            <div id="visualizacion-lista">
+                <p>Tu lista aparecerá aquí.</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>2. Ejecutar instrucciones</h2>
+
+            <label for="codigo">
+                Escribe instrucciones de Python:
+            </label>
+
+            <textarea id="codigo" rows="4" spellcheck="false">lista.pop(1)</textarea>
+
+            <div class="botones">
+                <button id="ejecutar">Ejecutar</button>
+                <button id="reiniciar">Reiniciar</button>
+            </div>
+
+            <p class="ayuda">
+                Puedes probar append(), pop(), insert(), remove() y otras
+                operaciones con listas.
+            </p>
+        </section>
+
+        <section class="panel">
+            <h2>3. Resultado de la operación</h2>
+
+            <div id="resultado">
+                <p>Aquí aparecerá el resultado.</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>4. Historial de cambios</h2>
+
+            <div id="historial">
+                <p>Tus instrucciones aparecerán aquí.</p>
+            </div>
+
+            <div class="botones">
+                <button id="anterior">Anterior</button>
+                <button id="siguiente">Siguiente</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Herramienta educativa para aprender Python.</p>
+    </footer>
+
+</body>
+</html>

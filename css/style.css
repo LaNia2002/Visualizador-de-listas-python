@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f8;
+    color: #25263a;
+}
+
+header {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #29264a;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+#estado-python {
+    font-size: 14px;
+    color: #d6d4ff;
+}
+
+main {
+    width: min(900px, 92%);
+    margin: 30px auto;
+}
+
+.panel {
+    margin-bottom: 24px;
+    padding: 24px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+h2 {
+    margin-top: 0;
+    color: #383266;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #c8c9d8;
+    border-radius: 6px;
+    font-family: Consolas, monospace;
+    font-size: 15px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #5146a5;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #393078;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ayuda {
+    color: #66677a;
+    font-size: 14px;
+}
+
+#visualizacion-lista {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.elemento-lista {
+    min-width: 75px;
+    padding: 12px;
+    text-align: center;
+    border: 2px solid #d6d2fa;
+    border-radius: 8px;
+    background-color: #f0eeff;
+}
+
+.indice {
+    display: block;
+    margin-bottom: 8px;
+    color: #66677a;
+    font-size: 12px;
+}
+
+.valor {
+    font-size: 18px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.elemento-lista.agregado {
+    border-color: #29965d;
+    background-color: #e0f8e9;
+}
+
+.elemento-lista.eliminado {
+    border-color: #d94b55;
+    background-color: #ffe7e9;
+}
+
+.elemento-lista.modificado {
+    border-color: #e4a325;
+    background-color: #fff3cf;
+}
+
+#resultado,
+#historial {
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.paso-historial {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid #5146a5;
+    background-color: #f5f4fc;
+    border-radius: 4px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #66677a;
+}
+
+@media (max-width: 600px) {
+    .panel {
+        padding: 18px;
+    }
+
+    .elemento-lista {
+        min-width: 60px;
+    }
+}
