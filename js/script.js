@@ -634,5 +634,13 @@ botonReiniciar.addEventListener("click", reiniciar);
 botonAnterior.addEventListener("click", irAnterior);
 botonSiguiente.addEventListener("click", irSiguiente);
 
+// Cargar un ejemplo en el editor sin ejecutarlo.
+document.querySelectorAll(".operacion").forEach(boton => {
+    boton.addEventListener("click", () => {
+        entradaCodigo.value = boton.dataset.codigo;
+        entradaCodigo.focus();
+    });
+});
+
 // Arrancar la aplicación.
 iniciarPython();

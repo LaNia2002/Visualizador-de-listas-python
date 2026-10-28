@@ -26,16 +26,30 @@ header h1 {
 }
 
 main {
-    width: min(900px, 92%);
-    margin: 30px auto;
+    width: min(1200px, 96%);
+    margin: 16px auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+
+    align-items: start;
 }
 
 .panel {
-    margin-bottom: 24px;
-    padding: 24px;
+    min-width: 0;
+    margin-bottom: 0;
+    padding: 16px;
+
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.panel h2 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 12px;
 }
 
 h2 {
@@ -163,5 +177,92 @@ footer {
 
     .elemento-lista {
         min-width: 60px;
+    }
+}
+.operaciones {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.operacion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 15px;
+    text-align: left;
+    background-color: #f5f4fc;
+    color: #25263a;
+    border: 1px solid #dedaf5;
+    border-radius: 8px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.operacion:hover {
+    background-color: #e9e6ff;
+    border-color: #5146a5;
+}
+
+.operacion code {
+    color: #5146a5;
+    font-size: 14px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.operacion span {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .operaciones {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Reducir el espacio que ocupan los campos de texto */
+textarea {
+    min-height: 65px;
+    margin-bottom: 10px;
+}
+
+/* Evitar que las listas largas estiren demasiado el panel */
+#visualizacion-lista {
+    max-height: 180px;
+    overflow-y: auto;
+    padding: 4px;
+}
+
+/* Historial compacto y desplazable */
+#historial {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Operaciones válidas: ocupan las dos columnas */
+main > .panel:nth-child(5) {
+    grid-column: 1 / -1;
+}
+
+/* En pantallas pequeñas, volver a una sola columna */
+@media (max-width: 700px) {
+    main {
+        grid-template-columns: 1fr;
+        width: 94%;
+    }
+
+    main > .panel:nth-child(5) {
+        grid-column: auto;
+    }
+
+    header {
+        padding: 18px 12px;
+    }
+
+    header h1 {
+        font-size: 24px;
     }
 }

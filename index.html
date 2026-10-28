@@ -17,7 +17,7 @@
 <body>
 
     <header>
-        <h1>Python List Visualizer</h1>
+        <h1>Visualizador de listas de Python</h1>
         <p>Simulador de listas python.</p>
         <p id="estado-python">Cargando Python...</p>
     </header>
@@ -81,10 +81,59 @@
             </div>
         </section>
 
+        <section class="panel">
+            <h2>5. Operaciones válidas</h2>
+
+            <p>
+                Estas son algunas de las instrucciones que puedes utilizar
+                para modificar o consultar tu lista.
+                Pulsa un ejemplo para cargarlo en el editor.
+            </p>
+
+            <div class="operaciones">
+
+                <button class="operacion" data-codigo="lista.append(6)">
+                    <code>lista.append(6)</code>
+                    <span>Añade el número 6 al final de la lista.</span>
+                </button>
+
+                <button class="operacion" data-codigo="lista.pop()">
+                    <code>lista.pop()</code>
+                    <span>Elimina y devuelve el último elemento.</span>
+                </button>
+
+                <button class="operacion" data-codigo="lista.pop(0)">
+                    <code>lista.pop(0)</code>
+                    <span>Elimina y devuelve el primer elemento.</span>
+                </button>
+
+                <button class="operacion" data-codigo="lista.remove(0)">
+                    <code>lista.remove(0)</code>
+                    <span>Elimina la primera aparición del valor 0.</span>
+                </button>
+
+                <button class="operacion" data-codigo="del lista[0]">
+                    <code>del lista[0]</code>
+                    <span>Elimina el elemento que ocupa el índice 0.</span>
+                </button>
+
+                <button class="operacion" data-codigo="lista[0] = 1">
+                    <code>lista[0] = 1</code>
+                    <span>Reemplaza el primer elemento por el número 1.</span>
+                </button>
+
+                <button class="operacion" data-codigo="print(lista[0])">
+                    <code>print(lista[0])</code>
+                    <span>Muestra el primer elemento sin modificar la lista.</span>
+                </button>
+
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <p>Herramienta educativa para aprender Python.</p>
+        <p>Creada por Estefanía Ulloa.</p>
     </footer>
 
 </body>
